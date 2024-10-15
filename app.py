@@ -1,7 +1,7 @@
 from flask import Flask
 from flask_smorest import Api
 
-from services.scraper import scraper_bp
+from services.main import main_bp
 
 app = Flask(__name__)
 
@@ -13,4 +13,4 @@ app.config["OPENAPI_URL_PREFIX"] = "/"
 
 api = Api(app)
 
-api.register_blueprint(scraper_bp)
+api.register_blueprint(main_bp)
